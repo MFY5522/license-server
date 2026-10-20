@@ -45,7 +45,7 @@ def fmt_ts(ts):
 
 init_db()
 
-def require_admin(request):
+def require_admin(request: Request):
     tok = request.cookies.get("session")
     if not tok or tok not in SESSIONS:
         raise HTTPException(status_code=302, headers={"Location": "/admin/login"})
