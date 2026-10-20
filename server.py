@@ -9,7 +9,7 @@ def init():
 init()
 def gen():
     a="ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; return "-".join("".join(secrets.choice(a) for _ in range(4)) for _ in range(4))
-DUR={"1d":("天卡",86400),"30d":("月卡",2592000),"365d":""年卡",31536000),"forever":""永久",None)}
+DUR={"1d":("天卡",86400),"30d":("月卡",2592000),"365d":("年卡",31536000),"forever":("永久",None)}
 def ft(t): return time.strftime("%Y-%m-%d %H:%M:%S",time.localtime(t)) if t else ""
 @APP.post("/api/activate")
 async def activate(req:Request):
